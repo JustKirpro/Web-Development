@@ -1,0 +1,153 @@
+/*Задаём цвет для страницы*/
+body {
+    background-color: aquamarine;
+}
+
+/*Создаём стиль для grid-контейнера, в который поместим блоки и квадрат по центру*/
+.grid-container {
+    display: grid;
+    grid: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+/*Создём стиль для блока grid-контейнера*/
+.grid-item {
+    color: blueviolet;
+    font-family: sans-serif;
+    border: thin solid black;
+    border-radius: 0.75rem;
+    margin: 2px;
+}
+
+/*Создаём стиль для первого блока grid-контейнера*/
+.first-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+/*Создаём стиль для маленького блока внутри первого блока grid-контейнера*/
+.small-block {
+    background-color: blueviolet;
+    height: 4rem;
+    width: 5rem;
+    margin: 1rem;
+}
+
+/*Изменяем цвет маленького блока при наведении*/
+.small-block:hover {
+    background-color: blue;
+}
+
+/*Создаём стиль для большого блока внутри первого блока grid-контейнера*/
+.big-block {
+    background-color: blueviolet;
+    height: 4rem;
+    width: 10rem;
+    margin: 1rem;
+}
+
+/*Изменяем цвет большого блока при наведении*/
+.big-block:hover {
+    background-color: cyan;
+}
+
+/*Создаём стиль для второго блока grid-контейнера*/
+.second-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Увеличиваем шрифт заголовка для второго блока grid-контейнера*/
+.second-item h1 {
+    font-size: 2rem;
+}
+
+/*Создаём стиль для окна ввода во втором блоке grid-контейнера*/
+.second-item input {
+    width: 200px;
+    border: 1px solid blueviolet;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: blueviolet;
+}
+
+/*Создаём стиль для плейсхолдера в окне ввода во втором блоке grid-контейнера*/
+.second-item input::placeholder {
+    color: blueviolet;
+    opacity: 0.5;
+}
+
+/*Делаем рамку жирнее при фокусе в окне ввода во втором блоке grid-контейнера*/
+.second-item input:focus {
+    box-shadow: 0 0 0 2px blueviolet;
+    outline: none;
+}
+
+/*Создаём стиль для третьего блока grid-контейнера*/
+.third-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+/*Создаём стиль при выделении текста в третьем блоке grid-контейнера*/
+.third-item p::selection {
+    color: lawngreen;
+    background-color: white;
+}
+
+/*Создаём стиль для контейнера изображений*/
+.images-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+/*Создаём стиль для изображения, ограничив его размеры*/
+.image {
+    width: 7.5rem;
+    height: auto;
+}
+
+/*Создаём стиль для четвёртого блока grid-контейнера*/
+.fourth-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Создаём стиль для маркированного списка*/
+.smile-list {
+    list-style-type: "\1F60D";
+    font-size: 2rem;
+}
+
+/*Выделяем жирным чётные элементы маркированного списка*/
+.smile-list :nth-child(even) {
+    font-weight: bold;
+}
+
+/*Изменяем курсор на указатель у каждого третьего элемента маркированного списка*/
+.smile-list :nth-child(3n) {
+    cursor: pointer;
+}
+
+/*Создаём стиль для квадрата по центру grid-контейнера*/
+.center-box {
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    background-color: BlueViolet;
+}
