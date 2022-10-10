@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab #3</title>
+        <link rel="stylesheet" href="styles/style.css" type="text/css">
+    </head>
+    <body>
+            <div class="form-flex-container">
+                <h1 class="localizable">Форма</h1>
+                <h2 id="greeting-header" class="localizable">Привет, пользователь!</h2>
+                <div class="buttons-flex-container">
+                    <input id="login-button" class="button localizable" type="button" value="Войти">
+                    <input id="logout-button" class="button localizable" style="display: none" type="button" value="Выйти">
+                    <input id="switch-language-button" class="button localizable" type="button" value="Switch to EN">
+                </div>
+                <div id="input-container">
+                    <p>
+                        <input class="input-text localizable" type="text" placeholder="Первое поле:">
+                    </p>
+                    <p>
+                        <input class="input-text localizable" type="text" placeholder="Второе поле:">
+                    </p>
+                </div>
+                <p>
+                    <input id="template-input" class="input-text localizable" type="text" placeholder="Плейсхолдер для нового поля:">
+                    <input id="add-input-element-button" class="button localizable" type="button" value="Добавить поле">
+                </p>
+            </div>
+            <script src="scripts/script.js"></script>
+    </body>
+</html>
