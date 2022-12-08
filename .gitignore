@@ -4,3 +4,4 @@
 *.ini
 */alembic/
 *.pyc
+node_modules/
