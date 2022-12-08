@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
@@ -10,6 +11,14 @@ from app.modules import *
 def create_app():
     app = FastAPI()
     app.include_router(router, prefix="/api")
+
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
     engine = create_db_engine()
     local_session_factory = create_session_factory(engine)

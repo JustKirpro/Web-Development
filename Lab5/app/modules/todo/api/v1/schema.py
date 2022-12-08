@@ -22,14 +22,15 @@ class PutBookModel(BaseModel, extra=Extra.forbid):
 class OutputBookModel(BaseModel, extra=Extra.forbid):
     book_id: int
     title: str
+    authors: List[str]
     release_year: int | None = None
     is_read: bool
-    language_id: int
+    language: str
 
 
 class PostAuthorModel(BaseModel, extra=Extra.forbid):
     name: str
-    languages: List[str]
+    languages: List[str] | None = None
     birthday: date | None = None
     biography: str | None = None
 
@@ -44,5 +45,6 @@ class PutAuthorModel(BaseModel, extra=Extra.forbid):
 class OutputAuthorModel(BaseModel, extra=Extra.forbid):
     author_id: int
     name: str
+    languages: List[str]
     birthday: date | None = None
     biography: str | None = None
