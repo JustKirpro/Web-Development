@@ -1,0 +1,7 @@
+alembic
+.env
+.alembic.ini
+.idea
+.dockerignore
+Dockerfile
+**/*.pyc
